@@ -8,7 +8,7 @@ from primer3tools import common, primer_pair
 class Error (Exception): pass
 
 class Primer3:
-    def __init__(self, fasta_file, config_file, genome_name, primer3_command='/nfs/users/nfs_m/mh12/bin/primer3-2.3.6/src/primer3_core'):
+    def __init__(self, fasta_file, config_file, genome_name, primer3_command='primer3_core'):
         self.input_fasta = os.path.abspath(fasta_file)
         self.config_file = os.path.abspath(config_file)
         self.genome_name = genome_name
