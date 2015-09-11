@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='primer3tools',
-    version='0.0.1',
+    version='0.0.2',
     description='primer3tools: Design PCR primers and check uniqueness across multiple genomes',
     packages = find_packages(),
     author='Martin Hunt',
