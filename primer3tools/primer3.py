@@ -107,6 +107,9 @@ class Primer3:
             elif self._primer3_found_no_primers(results):
                 continue
 
+            # remove everything after first white space so IDs match later,
+            # as bowtie2 will do the same in its output SAM file
+            results['SEQUENCE_ID'] = results['SEQUENCE_ID'].split(' ')[0]
             results_list = self._primer3_sequence_results_to_list(results)
             primer_pairs[results['SEQUENCE_ID']] = results_list
 
